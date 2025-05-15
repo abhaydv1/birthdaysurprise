@@ -1,0 +1,145 @@
+/* Reset and base */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f8e1f4, #c3dafe);
+  margin: 0;
+  padding: 0;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header with rich birthday heading */
+.header {
+  background: linear-gradient(90deg, #ff416c, #ff4b2b);
+  width: 100%;
+  padding: 30px 0;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(255, 75, 43, 0.4);
+  margin-bottom: 40px;
+}
+
+.birthday-heading {
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: 3px;
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+  font-family: 'Georgia', serif;
+  user-select: none;
+}
+
+/* Main container */
+.container {
+  display: flex;
+  gap: 40px;
+  max-width: 1000px;
+  width: 90%;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Gallery styling */
+.gallery {
+  flex: 1 1 300px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.gallery img {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery img:hover {
+  transform: scale(1.1) rotate(3deg);
+  box-shadow: 0 12px 20px rgba(255, 75, 43, 0.5);
+  z-index: 10;
+}
+
+/* Poem box styling */
+.poem-box {
+  flex: 1 1 400px;
+  background: #fff0f6;
+  border-radius: 20px;
+  padding: 30px 35px;
+  box-shadow: 0 12px 25px rgba(255, 75, 43, 0.25);
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #5c2a2a;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  user-select: text;
+}
+
+.poem-box h2 {
+  color: #d94f49;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  text-shadow: 1px 1px 3px #ffa3a3;
+}
+
+.poem-box p strong {
+  color: #ff3b3b;
+  font-weight: 700;
+  font-size: 1.3rem;
+  display: block;
+  margin-top: 15px;
+  text-align: center;
+}
+
+/* Message box styling */
+.message-box {
+  width: 90%;
+  max-width: 800px;
+  background: #ffefef;
+  padding: 25px 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(255, 75, 43, 0.2);
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #a23939;
+  margin-bottom: 50px;
+  user-select: text;
+}
+
+.message-box h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+  color: #e53e3e;
+  text-shadow: 1px 1px 3px #ffbaba;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallery img {
+    width: 120px;
+    height: 80px;
+  }
+
+  .poem-box {
+    width: 90%;
+    padding: 20px 25px;
+  }
+}
